@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form을 기입했다면 form 태그 안에서 type을 따로 기입하지 않았다면
+        input type = submit처럼 동작하니 주의할 것!!! -->
+    아이디<input type="text" class="id" /> 
+    비밀번호<input type="password" class="pwd" />
+    <button class="sign">회원가입</button>
+    <script>
+      const id = document.querySelector(".id");
+      const pwd = document.querySelector(".pwd");
+      const btn = document.querySelector(".sign");
+      btn.addEventListener("click", function () {
+        // 값이 들어올때 "" 빈값 뿐만 아니라
+        // undefine, null, 0(숫자형), false 등등 여러가지 검증해야 함.
+        if (id.value === "") {
+          alert("아이디를 입력해주세요");
+        } else if (pwd.value === "") {
+          alert("비밀번호를 입력해주세요");
+        } else {
+          alert("회원가입 완료!");
+        }
+      });
+    </script>
+  </body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form을 기입했다면 form 태그 안에서 type을 따로 기입하지 않았다면
+        input type = submit처럼 동작하니 주의할 것!!! -->
+    아이디<input type="text" class="id" /> 
+    비밀번호<input type="password" class="pwd" />
+    <button class="sign">회원가입</button>
+    <script>
+      const id = document.querySelector(".id");
+      const pwd = document.querySelector(".pwd");
+      const btn = document.querySelector(".sign");
+      btn.addEventListener("click", function () {
+        // 값이 들어올때 "" 빈값 뿐만 아니라
+        // undefine, null, 0(숫자형), false 등등 여러가지 검증해야 함.
+        if (id.value === "") {
+          alert("아이디를 입력해주세요");
+        } else if (pwd.value === "") {
+          alert("비밀번호를 입력해주세요");
+        } else {
+          alert("회원가입 완료!");
+        }
+      });
+    </script>
+  </body>
+</html>
+>>>>>>> bd9deaa0376a03549404e8548c7d9025bd239699

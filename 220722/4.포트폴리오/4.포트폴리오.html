@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- bootstrap CSS  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./4.포트폴리오.css" />
+
+    <!-- 아이콘 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+
+      <!-- nav bar -->
+    <nav class="fixed-top allnavbar navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><h1 class="nav-title-text">OctoHun</h1></a
+        >
+        <button
+          class="navbaricon-outline navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbaricon navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-bar collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="navmenu nav-link" aria-current="page" href="#carouselExampleCaptions">Main</a>
+            </li>
+            <li class="nav-item">
+              <a class="navmenu nav-link" href="#second">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="navmenu nav-link" href="#third">Skill</a>
+            </li>
+            <li class="nav-item">
+              <a class="navmenu nav-link" href="#fourth">Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="navmenu nav-link" href="#fifth">Closing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    </header>
+    
+    <main>
+
+      <!-- HOME화면 -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/road-geedfda5ef_1280.jpg" class="d-block w-100" alt="...">
+          <div class="slideblock carousel-caption d-none d-md-block">
+            <h5 class="slidetext">OctoHun의 웹사이트</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/mountains-g19866e40c_1280.jpg" class="d-block w-100" alt="...">
+          <div class="slideblock carousel-caption d-none d-md-block">
+            <h5 class="slidetext">Ssafy 이수중</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/beach-gc3e86e917_1920.jpg" class="d-block w-100" alt="...">
+          <div class="slideblock carousel-caption d-none d-md-block">
+            <h5 class="slidetext">Web Developer</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <h2 id="second">About</h2>
+    <!-- 프로필 -->
+    <div class="profile card" style="width: 35rem;">
+      <img src="./img/concept-g25969b9b2_640.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">my profile</h4>
+        <p class="card-text">Developer</p>
+        <a href="https://github.com/OctoHun/ssafy" class="btn btn-primary">my project</a>
+      </div>
+    </div>
+
+    <!-- 프로필 및 정보 -->
+    <div class="profilenav card" style="width: 60%">
+      <ul class="list-group list-group-flush">
+        <li class="navlist list-group-item"><span class="navicons material-icons material-icons-outlined">
+smartphone
+</span>010-3166-****</li>
+        <li class="navlist list-group-item"><span class="navicons material-icons material-icons-outlined">
+          email
+          </span>tjd_gns12@naver.com</li>
+        <li class="navlist list-group-item"><span class="navicons material-icons material-icons-outlined">
+          house
+          </span>광주 광산구 장덕로 6번길</li>
+    </div>
+    
+
+
+    <h2 id="third">Skill</h2>
+    <!-- 스킬 -->
+    <div class="skillall">
+      <ul class="skilltotal">
+        <li class="skillbox">C<div class="skillbar skillbar1 progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></li>
+        <li class="skillbox">C++<div class="skillbar skillbar2 progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></li>
+        <li class="skillbox">Python<div class="skillbar skillbar3 progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></li>
+        <li class="skillbox">JAVA<div class="skillbar skillbar4 progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></li>
+        <li class="skillbox">HTML/CSS/JAVAScript<div class="skillbar skillbar5 progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 40%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></li>
+      </ul>
+    </div>
+
+
+    <h2 id="fifth">closing</h2>
+    <!-- 클로징 -->
+    <div class="cat"></div>
+    <div class="ending"><h1>BYE~!</h1></div>
+    
+
+
+
+
+
+
+
+    </main>
+    
+
+    <!-- bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./4.포트폴리오.js"></script>
+  </body>
+</html>

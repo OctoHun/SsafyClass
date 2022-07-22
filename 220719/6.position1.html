@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 포지션은 항상 부모와 관계가 있다!!! */
+        .test1, .test2{
+            border: 1px solid black;
+        }
+        .container{
+            height: 1200px;
+            border: 10px solid red;
+        }
+        .test1{
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="test1">test1</div>
+      <div class="test2">test2</div>
+    </div>
+  </body>
+</html>

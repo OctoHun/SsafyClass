@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .h1-test,
+      .link-test {
+        border: 1px solid black;
+      }
+      .link-test {
+        /* width, height 안먹힘 */
+        display: inline-block;
+        /* display를 활용하여 바꿀 수 있음 */
+      }
+      .h1-test {
+        /* height, width 먹힘 */
+      }
+      button{
+        border: 10px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 줄바꿈이 안된다면 inline
+        크기 조정 불가능. a태그 span태그class = "link-test" 
+        안에 많은 것을 집어 넣어야 크기가 커짐 -->
+    <a class="link-test" href="">ffffffffff</a>
+    <a class="link-test" href="">fffff</a>
+
+    <!-- block요소 한 줄 전체
+        줄바꿈이 들어가며 모든 마진, 패팅 요소 적용 가능
+        크기 변경 가능. div태그 p태그 h1태그 -->
+    <h1 class="h1-test">랄랄라</h1>
+    <h1 class="h1-test">호호호</h1>
+
+    <!-- inline-block inline같이 글씨만큼 크기를 가지지만
+        block같이 크기 변경 가능. button, select -->
+    <button>나를 클릭해</button>
+  </body>
+</html>

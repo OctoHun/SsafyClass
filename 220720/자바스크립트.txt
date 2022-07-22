@@ -1,0 +1,70 @@
+ jquery 안씀
+
+<<<<<javascript>>>>>
+개발자도구 -> Console
+console.log(""); - 프린트
+세미콜론 붙여야 하지만 안붙여도 실행 가능.
+변수 선언(declaration) 해도 안해도 상관 없지만 하는게 좋음.
+배정(asign) 값 할당. 초기화(initialize) 선언과 배정.
+타입(int string char등) 안붙임.
+
+<<<변수>>>
+const - 장점:오류 잡아줌, 단점:한번 값이 할당되면 변경 불가능.(배열, 객체는 바꿀수 있음)
+let - 대부분 const로 가능하지만 필요한 경우 let 사용. 웬만하면 for문에서만 사용.
+var - deprecated(지원은 하지만 권장하지 않음), 선언을 다시 가능. 
+ @ const와 let은 블록레벨 스코프, var는 함수레벨 스코프 @
+
+<<<타입>>>
+typeof()
+number(모든 숫자), string(char 없음). boolean, null, undefined
+null - 의도적으로 비워놓은 것.
+undefined - 값이 없는 경우.
+array - 배열인데 대괄호 이용. 한 번에 출력 가능.
+타입 변환 할 때에는 대문자로 시작. String, Number 등
+
+<<<함수>>>
+함수 이름은 소문자로 시작, camelCase(중간에 대문자)
+function camelCase(){}
+지역변수, 전역변수
+함수나 변수의 선언 전에 사용해도 실행되지만 그렇게 쓰지 말것.
+객체, 배열의 경우 주소값이 넘어가기 때문에 주의할 것. 애초에 전역으로 쓸 것.
+자바스크립트에서 함수는 변수이다. 따라서 함수의 파라미터로 함수 자체를 받을 수 있음.
+const sampleFunc = function(){~~} --> 함수의 이름이 없을 수 있음(람다)
+
+<<<호이스팅>>>
+let과 const는 호이스팅(선언문만을 끌어올리는 행위)를 막기 때문에 순서가 중요.
+일반함수는 호이스팅이 발생하여 선언보다 실행이 먼저 나와도 가능. 하지만 변수로 할당하면
+실행 불가
+
+<<<ECMAScript>>>
+ECMA국제기구에서 만든 script 언어 기준. 자바스크립트는 이 표준을 따르며 제작된다.
+브라우저 사이트(사파리, 웨일, 크롬, 엣지 등)에서 자바스크립트 실행기를 만듬.
+ES6이후를 모던 javascript라고 표현.(2015년)
+
+<<<객체>>>
+중괄호로 시작, 마지막도 콤마 찍어야 함.
+const sample={a: 1, b:2, c:3,};
+객체(object)는 키(key)와 값(value)으로 이루어진 프로퍼티(property. 속성)의 모음이다.
+순서가 없다. 따라서 index로 접근 불가능.
+value에는 뭐든지 가능. 배열, 함수, 객체 등
+메써드: 객체 안에 있는 함수(자바스크립트 에서)
+JSON 연동 가능.
+
+<<<배열>>>
+크기 할당 안함. 배열에 추가, 삭제는 가능하나 배열 자체를 다시 배정하는건 안됨.
+
+<<<if문, for문, while문>>>
+==, != / ===, !== 2개만 쓰면 Type 달라도 true이므로 3개를 써서 Type도 같도록 한다.
+else if
+for --> C++이랑 똑같음.
+
+<<<기능>>>
+alert(경고창), prompt(입력창), 타입변환(Number, String), 변수배열.length, push(배열에 추가)
+concat(배열끼리 합칠 때 배열1.concat(배열2)), document
+
+<<<QuerySelector>>>
+jquery랑은 다르게 javascript 이다. (only javascript ==> 바닐라 javascript)
+
+<<<Event Driven>>>
+특정한 이벤트 발생시 함수 호출
+sampleBtn.addEventListener("이벤트", 동작할 함수);
