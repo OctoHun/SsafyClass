@@ -1,0 +1,38 @@
+.black{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+.white{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+}
+.big-box{
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
+}
+.line1{
+    height: 100px;
+    display: flex;
+}
+.line2{
+    display:flex;
+}
+.five-one{
+    background-image: url("./black_pawn.png");
+    background-size: cover;
+}
+.eight-four{
+    background-image: url("./white_queen.png");
+    background-size: cover;
+}
+.eight-five{
+    background-image: url("./white_king.png");
+    background-size: cover;
+}
+.eight-eight{
+    background-image: url("./white_rook.png");
+    background-size: cover;
+}

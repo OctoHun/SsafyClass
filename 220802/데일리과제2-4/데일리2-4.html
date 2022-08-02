@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        /* 자손 결합자 */
+        div p {
+            color: blue;
+        }
+        /* 자식 결합자 */
+        div > p {
+            color: crimson;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 자손 결합자는 첫 번째 요소를 만족하는 것 들 중
+        두번째 요소를 만족하는 모든 하위 요소들을 선택하는 것이고 -->
+    <!-- 자식 결합자는 첫 번째 요소를 만족하는 것 들 중
+        두번째 요소를 만족하는 바로 아래 하위 요소(자식)들을 선택하는 것이다. -->
+    <div>
+        <p>
+            div 안에 p태그
+        </p>
+       <span>
+            <p>
+                div 안에 span 안에 p태그
+            </p>
+       </span>
+    </div>
+
+  </body>
+</html>
+ <!-- 자손 결합자
+div p {
+    color: blue;
+} -->
