@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- booststrap -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+  crossorigin="anonymous"
+/>
+
+  <style>
+    body{
+      width: 500px;
+      margin-left: 10px;
+    }
+    .alert-text{
+      height: 60px;
+      width: 500px;
+      background-color: red;
+      color: white;
+    }
+    h1{
+      border-bottom: 2px solid rgb(207, 207, 207);
+      padding: 20px;
+    }
+    .form-container{
+      border: 2px solid rgb(207, 207, 207);
+      margin-top: 10px;
+      
+    }
+    .form-title{
+      text-align: center;
+      border-bottom: 2px solid blue;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .btn-signin{
+      width: 100%;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="alert-text alert py-auto" role="alert">
+      Invalid Login or password
+    </div>
+    <div><h1 class="fw-bold">HPHK 전용 Gitlab 시스템</h1></div>
+  </header>
+
+  <form>
+    <div class="form-container">
+        <legend class="form-title mb-3">Sign in</legend>
+        <div class="mb-3 mt-3 px-3">
+          <label for="exampleInputEmail1" class="form-label fw-bold">Username or Email</label>
+          <input type="text" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3 px-3">
+          <label for="exampleInputEmail1" class="form-label fw-bold">Password</label>
+          <input type="text" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3 d-flex justify-content-between px-3">
+          <div class="remember">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <a href="#" class="text-decoration-none">Forgot your password?</a>
+        </div>
+        <div class="mx-3 mb-3">
+          <button type="submit" class="btn-signin btn btn-success">Sign in</button>
+        </div>
+    </div>
+    
+  </form>
+ 
+
+  <!-- booststrap -->
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+</body>
+</html>
