@@ -1,0 +1,25 @@
+/* 03_community.css */
+/* 아래에 코드를 작성해 주세요. */
+body{
+    padding-top: 76px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+li > a{
+    text-decoration: none;
+}
+aside{
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgb(212, 212, 212);
+}
+@media only screen and (min-width:992px){
+    aside{
+        padding-bottom: 0px;
+        border-bottom: 0px;
+    }
+}
+article{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(212, 212, 212);
+}
