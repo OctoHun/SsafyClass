@@ -10,7 +10,7 @@ for i in range(1, t+1):
                 cnt += 1
             else:
                 cnt = 0
-                if m-k-1<=max:
+                if m-k-1 <= max:
                     break
             if cnt > max:
                 max = cnt
@@ -21,7 +21,7 @@ for i in range(1, t+1):
                 cnt += 1
             else:
                 cnt = 0
-                if n-k-1<=max:
+                if n-k-1 <= max:
                     break
             if cnt > max:
                 max = cnt
