@@ -11,16 +11,13 @@ for i in range(1, t+1):
         for k in range(10):
             if arr[j] == index[k]:
                 arr[j] = k
-                break
     for j in range(n):
         for k in range(j+1, n):
-            if arr[j]>arr[k]:
+            if arr[j] > arr[k]:
                 arr[j], arr[k] = arr[k], arr[j]
     for j in range(n):
         for k in range(10):
-            if arr[j] == k:
-                arr[j] = index[k]
-                break
+            if arr[j] == index[k]:
+                arr[j] = arr[k]
     for j in range(n):
         print(arr[j], end = ' ')
-    print()
