@@ -5,6 +5,7 @@ for i in range(1, t+1):
     length = len(a)
     arr = [0] * length
     temp = [1] * length
+    change = []
     for j in range(length):
         arr[j] = a[j]
     for j in range(length):
@@ -17,15 +18,17 @@ for i in range(1, t+1):
     for j in range(n, 0, -1):
         if cnt == n:
             break
-        for k in range(length):
+        for k in range(length//2+1):
             if cnt == n:
                 break
             if arr[k] != temp[k]:
                 for l in range(length-1, k, -1):
                     if arr[l] == temp[k]:
                         arr[k], arr[l] = arr[l], arr[k]
+                        change.append((arr[k], arr[l], k, l))
                         cnt += 1
                         break
+    change_len = cnt
     while cnt != n:
         if cnt + 1 < n:
             cnt += 2
@@ -42,4 +45,5 @@ for i in range(1, t+1):
     b = ''
     for j in range(length):
         b += arr[j]
+    if change_len
     print('#%d' %i, b)
