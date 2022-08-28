@@ -1,1 +1,3 @@
-print(not 1)
+for i in range(5):
+    pass
+print(i)
