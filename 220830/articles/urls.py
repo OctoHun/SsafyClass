@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+app_name = 'articles'
 urlpatterns = [
     # 화면 추가 path('경로', 해당 경로를 처리해 줄 view.py의 함수 이름)
     path('index/', views.index, name='index'),
