@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>DETAIL</h1>
+    <hr>
+    <div style="width:300px; height=450px;"><img src="{{movie.poster_url}}" alt=""></div>
+    <p class="fw-bold">{{movie.title}}</p>
+    <p>Audience : {{movie.audience}}</p>
+    <p>Release Dates : {{movie.release_date}}</p>
+    <p>Genre : {{movie.genre}}</p>
+    <p>Score : {{movie.score}}</p>
+    <p>{{movie.description}}</p>
+    <a href="{% url 'movies:edit' movie.pk %}">EDIT</a>
+    <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+    </form>
+    <a href="{% url 'movies:detail' movie.pk|add:'-1' %}">이전영화</a>
+    <a href="{% url 'movies:detail' movie.pk|add:'1' %}">다음영화</a><br>
+    <a href="{% url 'movies:index' %}">BACK</a>
+{% endblock content %}
