@@ -42,8 +42,8 @@ for i in range(1, t+1):
             if flag == length-1:
                 arr[length-1], arr[length-2] = arr[length-2], arr[length-1]
             cnt += 1
+
     b = ''
     for j in range(length):
         b += arr[j]
-    if change_len
     print('#%d' %i, b)

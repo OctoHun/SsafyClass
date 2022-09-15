@@ -20,6 +20,11 @@ for tc in range(1, 11):
                 arr[x+j] = q[i+3+j]
             for j in range(x, cnt):
                 arr[j+y] = temp[j]
+        if q[i] == 'D':
+            x = int(q[i+1])
+            y = int(q[i+2])
+            for j in range(x, cnt):
+                arr[j] = arr[j+y]
     print('#%d' %tc, end = ' ')
     for i in range(10):
         print(arr[i], end = ' ')
