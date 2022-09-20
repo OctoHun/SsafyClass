@@ -1,19 +1,17 @@
-def dfs(k, s):
-    global n
-    if n == 0:
+def abc(a, b):
+    global ans
+    c = n - ((a*5) + (b*3))
+    if c == 0:
+        if a < 0 or b < 0:
+            ans = -1
+            return
+        ans = a+b
         return
-    k = n % 5 + 5
-    if k % 3 == 0:
-
-
-
-
+    else:
+        abc(a-1, (n-(a-1)*5)//3)
 
 
 n = int(input())
-if n % 5 == 0:
-    ans = n//5
-else:
-    k = n//5
-    s = n%5
-    def(k, s)
+ans = 0
+abc(n//5, (n%5)//3)
+print(ans)
