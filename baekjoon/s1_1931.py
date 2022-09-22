@@ -53,19 +53,18 @@
 
 # ///////////////////////////////////////////////////////////
 
-def meeting(a, start, cnt):
-    global max
-    if cnt > max:
-        max = cnt
-    for i in range(a+1, n):
-        if arr[i][0] >= start:
-            meeting(i, arr[i][1], cnt+1)
+
 
 
 n = int(input())
 arr = [list(map(int, input().split())) for _ in range(n)]
-arr.sort(key=lambda x: (x[0], x[1]))
+arr.sort(key=lambda x: (x[1], x[0]))
 max = 0
-for i in range(n):
-    meeting(i, arr[i][1], 1)
-print(max)
+end = arr[0][1]
+cnt = 1
+for i in range(1, n):
+    if end <= arr[i][0]:
+        cnt += 1
+        end = arr[i][1]
+print(cnt)
+

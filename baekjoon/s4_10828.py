@@ -13,11 +13,11 @@ for i in range(n):
         print(len(stack))
     elif arr[i][0] == 'empty':
         if stack:
-            print(1)
-        else:
             print(0)
+        else:
+            print(1)
     elif arr[i][0] == 'top':
         if stack:
-            print(stack(len(stack)-1))
+            print(stack[len(stack)-1])
         else:
             print(-1)
