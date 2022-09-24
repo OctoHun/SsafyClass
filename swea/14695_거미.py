@@ -15,22 +15,14 @@ for tc in range(1, t+1):
         # c = x1(y2-y3) + x2(y3-y1) + x3(y1-y2)
         # d = -x1(y2z3-y3z2) - x2(y3z1-y1z3) - x3(y1z2-y2z1)
         # 점과 평면사이의 거리 d = (ax + by + cz + d) / sqrt(a^2 + b^2 + c^2)
-        for i in range(n):
-            for j in range(i+1, n):
-                for k in range(j+1, n):
-                    a = y[i]*(z[j]-z[k]) + y[j]*(z[k]-z[i]) + y[k]*(z[i]-z[j])
-                    b = z[i]*(x[j]-x[k]) + z[j]*(x[k]-x[i]) + z[k]*(x[i]-x[j])
-                    c = x[i]*(y[j]-y[k]) + x[j]*(y[k]-y[i]) + x[k]*(y[i]-y[j])
-                    d = x[i]*(y[j]*z[k] - y[k]*z[j]) + x[j]*(y[k]*z[i] - y[i]*z[k]) + x[k]*(y[i]*z[j] - y[j]*z[i])
-                    if a != 0 and b != 0 and c != 0:
-                        flag = 1
-                        break
-                    if k == n-1:
-                        flag = 2
-                        break
-                if flag > 0:
-                    break
-            if flag > 0:
+
+        for k in range(2, n):
+            a = y[0]*(z[1]-z[k]) + y[1]*(z[k]-z[0]) + y[k]*(z[0]-z[1])
+            b = z[0]*(x[1]-x[k]) + z[1]*(x[k]-x[0]) + z[k]*(x[0]-x[1])
+            c = x[0]*(y[1]-y[k]) + x[1]*(y[k]-y[0]) + x[k]*(y[0]-y[1])
+            d = x[0]*(y[1]*z[k] - y[k]*z[1]) + x[1]*(y[k]*z[0] - y[0]*z[k]) + x[k]*(y[0]*z[1] - y[1]*z[0])
+            if a != 0 and b != 0 and c != 0:
+                flag = 1
                 break
         if flag == 1:
             for i in range(k+1, n):
