@@ -1,33 +1,34 @@
-def p(i, k):
-    global min_V
-    if i == k:
-        pl.insert(0, 1)
-        pl.insert(N, 1)
-        temp = 0
-        for j in range(N):
-            temp += arr[pl[j]-1][pl[j+1]-1]
-        if temp < min_V:
-            min_V = temp
+def mergeSort(start, end):
+    if start >= end:
         return
-    else:
-        for x in range(M):
-            if not used[x]:
-                used[x] = 1
-                pl[i] = perm[x]
-                p(i+1, k)
-                used[x] = 0
+    mid = (start+end)//2
+    mergeSort(start, mid)
+    mergeSort(mid+1, end)
+    merge(start, mid+1, end)
 
 
-T = int(input())
-for tc in range(1, T+1):
-    N = int(input())
-    arr = [list(map(int, input().split())) for _ in range(N)]
+def merge(left, right, end):
+    merged = []
+    l, r = left, right
+    while l < right and r <= end:
+        if arr[l] < arr[r]:
+            merged.append(arr[l])
+            l += 1
+        else:
+            merged.append(arr[r])
+            r += 1
+    while l < right:
+        merged.append(arr[l])
+        l += 1
+    while r <= end:
+        merged.append(arr[r])
+        r += 1
+    l = left
+    for i in merged:
+        arr[l] = i
+        l += 1
 
-    perm = [i for i in range(2, N+1)]
-    M = len(perm)
-    used = [0]*M
-    pl = [0]*M
-    min_V = 100*N
 
-    p(0, M)
-    print(min_V)
+arr = [1, 5, 2, 6, 7, 4, 5, 8, 0, 6]
+mergeSort(0, len(arr)-1)
+print(arr)
