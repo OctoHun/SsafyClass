@@ -1,34 +1,24 @@
-def mergeSort(start, end):
-    if start >= end:
+def p(cnt, arr):
+    if cnt == 5:
+        print(arr)
         return
-    mid = (start+end)//2
-    mergeSort(start, mid)
-    mergeSort(mid+1, end)
-    merge(start, mid+1, end)
+    p(cnt+1, arr+[a[cnt]])
+    p(cnt+1, arr)
 
 
-def merge(left, right, end):
-    merged = []
-    l, r = left, right
-    while l < right and r <= end:
-        if arr[l] < arr[r]:
-            merged.append(arr[l])
-            l += 1
-        else:
-            merged.append(arr[r])
-            r += 1
-    while l < right:
-        merged.append(arr[l])
-        l += 1
-    while r <= end:
-        merged.append(arr[r])
-        r += 1
-    l = left
-    for i in merged:
-        arr[l] = i
-        l += 1
+def c(cnt, arr):
+    if cnt == 5:
+        print(arr)
+        return
+    for i in range(5):
+        if visit[i] == 0:
+            visit[i] = 1
+            c(cnt+1, arr+[a[i]])
+            visit[i] = 0
 
 
-arr = [1, 5, 2, 6, 7, 4, 5, 8, 0, 6]
-mergeSort(0, len(arr)-1)
-print(arr)
+
+a = [1, 2, 3, 4, 5]
+# p(0, [])
+visit = [0]*5
+c(0, [])
