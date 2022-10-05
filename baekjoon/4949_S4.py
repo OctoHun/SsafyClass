@@ -1,6 +1,6 @@
 from collections import deque
-arr = [0]*1000
-for i in range(1000):
+arr = [0]*100000
+for i in range(100000):
     arr[i] = list(input())
     if len(arr[i]) == 1 and arr[i][0] == '.':
         break
