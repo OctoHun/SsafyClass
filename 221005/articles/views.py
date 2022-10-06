@@ -108,3 +108,5 @@ def comments_delete(request, article_pk, comment_pk):
         if request.user == comment.user:
             comment.delete()
     return redirect('articles:detail', article_pk)
+
+    
