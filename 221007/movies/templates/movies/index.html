@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>INDEX</h1>
+{% if request.user.is_authenticated %}
+    <a href="{% url 'movies:create' %}" class='btn btn-primary'>CREATE</a>
+{% else %}
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#index_login">
+        CREATE
+    </button>
+{% endif %}
+    <hr>
+    <div class="modal fade" id="index_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              로그인이 필요합니다!
+            </div>
+            <div class="modal-footer">
+              <a href="{% url 'accounts:login' %}" class="btn btn-primary">로그인하러가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% for movie in movies %}
+    <a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+    <br>
+    <br>
+    score : {{ movie.score }}
+    <br>
+    작성자 : {{ movie.author }}
+    <hr>
+{% endfor %}
+{% endblock content %}

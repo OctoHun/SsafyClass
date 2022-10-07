@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class='text-center'>DETAIL</h1>
+<hr>
+<div class='d-flex justify-content-center'>
+  <div class="card" style="width: 27rem;">
+    <img src={{ movie.poster_url }} class="card-img-top" alt="포스터">
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text">Audience : {{ movie.audience }}</p>
+      <p class="card-text">Release Dates : {{ movie.release_date }}</p>
+      <p class="card-text">Genre : {{ movie.genre }}</p>
+      <p class="card-text">Score : {{ movie.score }}</p>
+      <p class="card-text">작성자 : {{ movie.author }}</p>
+      <p class="card-text">{{ movie.description}}</p>
+      {% if request.user.is_authenticated %}
+        {% if request.user == movie.author %}
+          <a href="{% url 'movies:update' movie.pk %}" class="btn btn-info">UPDATE</a>
+          <form action="{% url 'movies:delete' movie.pk %}" method='POST' class='d-inline'>
+            {% csrf_token %}
+            <input type="submit" class='btn btn-danger' value='DELETE'>
+          </form>
+        {% else %}
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#not_match">
+            UPDATE
+          </button>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#not_match">
+            DELETE
+          </button>
+        {% endif %}
+      {% else %}
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#need_login">
+          UPDATE
+        </button>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#need_login">
+          DELETE
+        </button>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="need_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        로그인이 필요합니다!
+      </div>
+      <div class="modal-footer">
+        <a href="{% url 'accounts:login' %}" class="btn btn-primary">로그인하러가기</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="not_match" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        아이디가 작성자와 맞지 않습니다!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">창 닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="{% url 'movies:index' %}" class='btn btn-warning'>BACK</a>
+
+{% endblock content %}
