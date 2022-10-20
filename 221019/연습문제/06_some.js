@@ -6,3 +6,7 @@ const requests = [
 ]
 
 // answer
+const progress = requests.some(function (request) {
+  return request.status === 'pending'
+})
+console.log(progress)

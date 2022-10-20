@@ -3,7 +3,7 @@ const newNumbers = [4, 9, 16]
 
 // answer
 const ans = newNumbers.map((num) => {
-  return num ** 2
+  return Math.sqrt(num)
 })
 console.log(ans)
 

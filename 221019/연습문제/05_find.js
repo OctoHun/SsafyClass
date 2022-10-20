@@ -6,8 +6,10 @@ const people = [
 ]
 
 // answer
-
-
+const admin  = people.find(function (person) {
+  return person.admin === true;
+})
+console.log(admin)
 
 
 // 2. accounts에서 잔액이 24,000인 사람을 찾으세요.
@@ -18,3 +20,7 @@ const accounts = [
 ]
 
 // answer
+const account = accounts.find(function (account) {
+  return account.balance === 24000;
+})
+console.log(account)

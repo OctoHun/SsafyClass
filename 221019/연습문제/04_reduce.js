@@ -3,3 +3,12 @@
 const names = ['harry', 'aiden', 'julie', 'julie', 'edward']
 
 // answer
+const counted = names.reduce((result, theirName) => {
+    if (theirName in result) {
+        result[theirName] += 1
+    } else {
+        result[theirName] = 1
+    }
+    return result
+}, {})
+console.log(counted)

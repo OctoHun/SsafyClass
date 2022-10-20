@@ -6,3 +6,7 @@ const users = [
 ]
 
 // answer
+const hasSubmitted = users.every((user) => {
+  return user.submmited === true
+})
+console.log(hasSubmitted)
