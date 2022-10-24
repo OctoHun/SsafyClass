@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <button id="btn">클릭</button>
+  <input type="text">
+
+  <script>
+    // input에 입력하면 입력 값을 실시간으로 출력하고 버튼을 클릭하면 출력된 값의 클래스를 토글하기
+    const inputTag = document.querySelector('input')
+    const btn = document.querySelector('#btn')
+    btn.addEventListener('click', function (event) {
+      const h1Tag = document.querySelector('h1')
+      h1Tag.classList.toggle('blue')
+    })
+    inputTag.addEventListener('input', function (event) {
+      const h1Tag = document.querySelector('h1')
+      h1Tag.innerText = event.target.value
+    })
+  </script>
+</body>
+</html>
