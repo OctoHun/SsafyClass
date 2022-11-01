@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .line{
+        text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+    <div id="app">
+        <select name="tag" v-model="status">
+            <option value="all" selected>전체</option>
+            <option value="ing">진행중</option>
+            <option value="done">완료</option>
+        </select>
+        <input type="text" v-model="textinput">
+        <button @click="add">+</button>
+        <ul>
+            <li v-for="(item, index) in list" :key="index" v-show="option">
+                <input type="checkbox" v-model="item.isActive">
+                <span v-bind:class="{line:item.isActive}"> {{item.item}}</span>
+            </li>
+        </ul>
+        <button v-on:click="remove">완료된 할 일 지우기</button>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        list: [],
+        textinput: '',
+        status: 'all',
+        option: true,
+      },
+      computed: {
+        status: function () {
+            if (this.status === 'ing') {
+                
+            } else if (this.status === 'done') {
+
+            } else {
+
+            }
+        }
+      },
+      methods: {
+        add: function () {
+            if (this.textinput.length === 0) {
+                alert('내용을 입력해 주세요!')
+            } else {
+                this.list.push({item: this.textinput, isActive: false})
+                this.textinput = ''
+            }
+        },
+        remove: function () {
+            len = this.list.length
+            let temp = []
+            for (let i = 0; i < len; i++) {
+                if (this.list[i].isActive === false) {
+                    temp.push({item: this.list[i].item, isActive: false})
+                }
+            }
+            this.list = temp
+        }
+      }
+    })
+  </script>
+</body>
+</html>
