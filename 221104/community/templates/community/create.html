@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load bootstrap5 %}
+
+{% block title %}
+<h1 class="mt-5">Create</h1>
+{% endblock title %}
+
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <div class="d-flex  flex-row-reverse">
+    <input type="submit" class="btn btn-info">
+    </div>
+  </form>
+  <hr>
+  <a href="{% url 'community:index' %}" class="btn btn-primary mb-5">BACK</a>
+
+{% endblock %}

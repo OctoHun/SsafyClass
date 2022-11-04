@@ -2,6 +2,12 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/221028/git practice/git-branch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/221028/git practice/git-conflict" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/221028/git practice/git-reset-practice/hard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/221028/git practice/git-reset-practice/mixed" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/221028/git practice/git-reset-practice/soft" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/221028/git practice/git-revert-practice" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/django_ws_1_1" vcs="Git" />
   </component>
 </project>

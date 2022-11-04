@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+<h1 class="mt-5">Movie Info</h1>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="card m-auto w-50 mb-5">
+    <img src="{{movie.poster_path}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <p class="card-text">{{movie.overview}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">출시일: {{movie.release_date}}</li>
+      <li class="list-group-item">인지도 : {{movie.popularity}}</li>
+      <li class="list-group-item">평점 : {{movie.vote_average}}</li>
+      <li class="list-group-item">장르 :
+      {% for genre in genres %}
+        {{genre.name}}
+      {% endfor %}</li>
+    </ul>
+    <div class="card-body">
+      <a href="{% url 'movies:index' %}" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+{% endblock %}
