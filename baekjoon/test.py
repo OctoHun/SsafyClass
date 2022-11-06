@@ -1,1 +1,4 @@
-print('1' <= '3' <= '26')
+import heapq
+arr = []
+heapq.heapify(arr)
+heapq.heappop(arr)
